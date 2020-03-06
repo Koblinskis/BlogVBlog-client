@@ -1,16 +1,10 @@
 {
-  "name": "blogvblog",
+  "name": "blogvblog-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "chart.js": "^2.9.3",
-    "cors": "^2.8.5",
     "css-loader": "^3.4.2",
-    "dotenv": "^8.2.0",
-    "env-cmd": "^10.1.0",
-    "express": "^4.17.1",
-    "mongo": "^0.1.0",
-    "mongoose": "^5.8.7",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
@@ -27,17 +21,13 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "nodemon": "^2.0.2"
+    "@testing-library/user-event": "^7.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "env-cmd -f ./.env.development nodemon server/app.js",
-    "mongo": "C:/Users/Me/mongodb/bin/mongod.exe --dbpath=C:/Users/Me/mongodb-data",
-    "start-server": "node server/app.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

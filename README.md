@@ -1,72 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+[Play Blog V Blog here!](https://competent-thompson-123cfb.netlify.com/)
 
-In the project directory, you can run:
+  
 
-### `yarn server`
+Related repos: [Client](https://github.com/Koblinskis/BlogVBlog-client), [Server](https://github.com/Koblinskis/BlogVBlog-server), [MongoDB](https://github.com/Koblinskis/BlogVBlog-mongo)
 
-Runs the nodejs server with automatic reload. Server runs on 3001 (for now will be fixed in deployment)
+# Blog V Blog Client
 
-### `yarn start`
+Blog V Blog is a web application that pits two blog titles against each other and the winner is determined by the user. The client is a React application that talks to an ExpressJS API backend, and the server reads and writes to a MongoDB Database. The server selects two random blogs titles from the database and returns them to the client, and then the user picks their favorite. The server records a winning score for the title selected. The highest scoring titles per category can be viewed on the winners page.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Screenshot](https://raw.githubusercontent.com/Koblinskis/BlogVBlog-mongo/master/screenshot.png)
 
-### `yarn test`
+This repo is for the client-side code of the Blog V Blog project. The project is using the React framework to componentize the frontend and to easily handle the application's reactive data. React-router is used to handle routing.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The browser's default CSS is reset using [normalize.css](https://necolas.github.io/normalize.css/). SCSS is used to make styling development easier. The SCSS in this project is following the [BEM](http://getbem.com/) methodology that helps to create reusable components and code sharing in frontend development.
 
-### `yarn build`
+On the winners page [ChartJS](https://www.chartjs.org/) is used to display a bar chart that shows the user which blog is winning in each category and by how many votes.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The brower's built-in Fetch API is used to make GET and POST requests to the [Express API backend](https://github.com/Koblinskis/BlogVBlog-server). 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This is deployed on Netlify.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to run the client
+Create `.env.development` file in the root of the project. That file needs to contain a reference to a running version of the server. Find out how to run the server by clicking [here](https://github.com/Koblinskis/BlogVBlog-server). 
+```
+REACT_APP_NODE_SERVER_URL="http://localhost:3001"
+```
+**Step to run:**
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ 1. `npm install`
+ 2. `npm run start`
